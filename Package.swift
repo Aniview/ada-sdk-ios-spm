@@ -6,7 +6,7 @@ import PackageDescription
 private let artifactVersion = "0.0.1"
 
 let package = Package(
-    name: "ada-local-xcframework",
+    name: "AdaSdk",
     platforms: [.iOS(.v14)],
     products: [
         .library(
