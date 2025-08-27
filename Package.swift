@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-private let artifactVersion = "0.0.1"
+private let artifactVersion = "0.0.3"
 
 let package = Package(
     name: "AdaSdk",
@@ -28,7 +28,7 @@ let package = Package(
         .binaryTarget(
             name: "AdaSdk",
             url: "https://github.com/Aniview/ada-sdk-ios-spm/releases/download/artifact_\(artifactVersion)/AdaSdk.zip",
-            checksum: "5397977d32b4f07397ab2a9c26a630ae25e80e572c830d8db8ddf709673f76fe"
+            checksum: "f2bb4b8731c2f7a9523753d6e0d9b326e44212c3499254bdb0be212f441bdee0"
         )
     ]
 )
