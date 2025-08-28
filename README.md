@@ -1,21 +1,17 @@
 # Ada SDK (iOS)
 
 AdaSDK is an iOS SDK for rendering **advertisement views** inside your app.  
-It acts as an **enhanced ad solution** that combines ads from multiple sources, including:
-
-- [Google Ad Manager (GAM)](https://developers.google.com/ad-manager/mobile-ads-sdk/ios/quick-start)
-- AdaSDK’s own backend ad source
+It acts as an enhanced ad solution
 
 ---
 
 ## Features
 
 - Unified interface for ads from multiple sources
-- Supports Google Ad Manager and custom backend ads
+- Supports Google Ad Manager ads
 - Simple configuration with `AdaConfig`
 - Drop-in `AdaView` for displaying ads
 
----
 
 ## Requirements
 
@@ -57,7 +53,7 @@ class ViewController: UIViewController {
         )
 
         // Create the ad view
-        let adView = AdaView(profile: config)
+        let adView = AdaView(config: config)
         adView.translatesAutoresizingMaskIntoConstraints = false
 
         // Add it to your parent view
@@ -68,7 +64,7 @@ class ViewController: UIViewController {
             adView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             adView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             adView.widthAnchor.constraint(equalToConstant: 320),
-            adView.heightAnchor.constraint(equalToConstant: 50)
+            adView.heightAnchor.constraint(equalToConstant: 300)
         ])
     }
 }
