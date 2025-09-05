@@ -3,8 +3,6 @@
 AdaSDK is an iOS SDK for rendering **advertisement views** inside your app.  
 It acts as an enhanced ad solution
 
----
-
 ## Features
 
 - Unified interface for ads from multiple sources
@@ -69,6 +67,34 @@ class ViewController: UIViewController {
     }
 }
 ```
+
+### Observing Events
+
+The ADA library provides various events for tracking ads.  
+To observe these events, implement the AdaViewDelegate protocol.  
+If you need to update your layout when the ad source provides a banner with a different size,  
+implement the SizeDelegate protocol to track banner height updates.
+
+
+```swift
+let adView = AdaView(config: config)
+adView.delegate = self
+adView.sizeDelegate = self
+
+extension ViewController: AdaViewDelegate {
+    func onEvent(_ event: AdaSdk.AdaEvent) {
+        print("Ada event: \(event)")
+    }
+}
+
+extension ViewController: SizeDelegate {
+    func onHeightChange(_ height: CGFloat) {
+        print("Ada view needs height: \(height)")
+    }
+}
+```
+
+
 ### Example Project
 
 A complete working example is available here:
