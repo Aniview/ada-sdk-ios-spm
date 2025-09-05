@@ -71,10 +71,39 @@ class ViewController: UIViewController {
 ### Observing Events
 
 The ADA library provides various events for tracking ads.  
-To observe these events, implement the AdaViewDelegate protocol.  
+To observe these events, implement the AdaViewDelegate protocol. 
 If you need to update your layout when the ad source provides a banner with a different size,  
 implement the SizeDelegate protocol to track banner height updates.
 
+**AdaEvent list:**
+```swift
+enum AdaEvent {
+    /**
+     * New Ad was loaded
+     */
+    case onLoaded
+
+    /**
+     * Failed to load an Ad
+     */
+    case onAdError
+
+    /**
+     * Ad impression was triggered
+     */
+    case onImpression
+
+    /**
+     * Next Ad can now be loaded
+     */
+    case onAdCanRefresh
+
+    /**
+     * Ad was clicked
+     */
+    case onClicked
+}
+```
 
 ```swift
 let adView = AdaView(config: config)
