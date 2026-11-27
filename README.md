@@ -13,9 +13,13 @@ It acts as an enhanced ad solution
 
 ## Requirements
 
-- iOS 14.0+
+- iOS 15.0+
 - Xcode 16+
-- [Google Mobile Ads SDK](https://developers.google.com/ad-manager/mobile-ads-sdk/ios/quick-start)  
+- [Google Mobile Ads SDK](https://developers.google.com/ad-manager/mobile-ads-sdk/ios/quick-start) 12.0.0+
+  (supported range: `12.0.0 ..< 14.0.0`, i.e. 12.x and 13.x)
+
+> **Note:** If your app pins Google Mobile Ads, make sure the
+> version is in this range so Swift Package Manager can resolve it.
 
 ⚠️ **Important**:  
 AdaSDK depends on the Google Mobile Ads SDK.  

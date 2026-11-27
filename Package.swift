@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-private let artifactVersion = "1.4.0"
+private let artifactVersion = "1.5.0"
 
 let package = Package(
     name: "AdaSdk",
@@ -15,7 +15,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "11.0.0")
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", "12.0.0"..<"14.0.0")
     ],
     targets: [
         .target(
@@ -28,7 +28,7 @@ let package = Package(
         .binaryTarget(
             name: "AdaSdk",
             url: "https://github.com/Aniview/ada-sdk-ios-spm/releases/download/artifact_\(artifactVersion)/AdaSdk.zip",
-            checksum: "c80b4d6d4118fd564493c52032b493f86432e8a59f2661f7c8a7d58dc5a4a5f4"
+            checksum: "2a6aa7727cea69decd2f766e55335cf2c5e4db206b3a5d5c70454ea8322226fd"
         )
     ]
 )
